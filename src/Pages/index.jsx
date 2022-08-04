@@ -1,9 +1,9 @@
 import HomePage from './HomePage';
-import Profile from './Profile';
+import Repositories from './Repositories';
 
 const PAGES = {
   HomePage,
-  Profile,
+  Repositories,
 };
 
 export default PAGES;
