@@ -1,7 +1,13 @@
 import React from 'react';
+import { useLocation } from 'react-router-dom';
+import COMPONENTS from '../../Components';
 
 export default function Repositories() {
+  const { state } = useLocation();
+
   return (
-    <div>Repositories</div>
+    <main>
+      <COMPONENTS.Profile data={state} />
+    </main>
   );
 }
