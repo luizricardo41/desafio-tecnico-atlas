@@ -8,7 +8,7 @@ export default function MainRoutes() {
     <Routes>
       <Route path="/" element={<Navigate replace to="/homepage" />} />
       <Route path="/homepage" element={<PAGES.HomePage />} />
-      <Route path="/profile" element={<PAGES.Profile />} />
+      <Route path="/repositories" element={<PAGES.Repositories />} />
       <Route path="*" element={<h1>PAGE NOT FOUND</h1>} />
     </Routes>
   );
