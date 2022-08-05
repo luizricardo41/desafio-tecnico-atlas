@@ -8,6 +8,7 @@ export default function Repositories() {
   return (
     <main>
       <COMPONENTS.Profile data={state} />
+      <COMPONENTS.ListRepositories username={state.login} />
     </main>
   );
 }
