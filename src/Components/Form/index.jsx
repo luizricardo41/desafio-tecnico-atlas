@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { BsSearch } from 'react-icons/bs';
 import requestApi from '../../Services/api/request';
+import StyleForm from './styles';
 
 export default function Form() {
   const [username, setUsername] = useState('');
@@ -32,24 +34,28 @@ export default function Form() {
   };
 
   return (
-    <form>
-      <label htmlFor="search">
-        Buscar Repositório no GitHub
-        <input
-          id="search"
-          onChange={({ target }) => setUsername(target.value)}
-        />
-      </label>
-      <button
-        type="button"
-        onClick={checkUser}
-      >
-        Buscar
-
-      </button>
+    <StyleForm>
+      <h3>Buscar Repositórios no GitHub</h3>
       <div>
-        <span>{ message }</span>
+        <label htmlFor="search">
+          <input
+            id="search"
+            onChange={({ target }) => setUsername(target.value)}
+            placeholder="Digite o nome do usuário"
+          />
+        </label>
+        <button
+          type="button"
+          onClick={checkUser}
+        >
+          <BsSearch />
+          {' '}
+          Buscar
+
+        </button>
+
       </div>
-    </form>
+      <span>{ message }</span>
+    </StyleForm>
   );
 }
