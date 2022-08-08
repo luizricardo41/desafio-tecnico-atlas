@@ -17,9 +17,11 @@ const StyledProfile = styled.section`
     border-radius: 190px;
   }
 
-  button {
-    height: 2rem;
-    width: 20rem;
+  a {
+    text-decoration: none;
+    color: black;
+    padding: 0.4rem 8rem;
+    font-size: small;
     font-weight: bold;
     border: 0.5px solid #00f3;
     background: white;
@@ -40,8 +42,12 @@ const StyledProfile = styled.section`
   }
 
   @media (max-width: 450px) {
-    img, button {
+    img {
       width: 70vw;
+    }
+
+    a {
+      padding: 0.4rem 30vw;
     }
   }
 `;
