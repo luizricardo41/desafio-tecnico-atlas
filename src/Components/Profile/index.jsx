@@ -6,7 +6,7 @@ import StyledProfile from './styles';
 
 export default function Profile({ data }) {
   const {
-    avatar_url: avatarUrl, login, email, name, bio, followers, following,
+    avatar_url: avatarUrl, login, email, name, bio, followers, following, html_url: url,
   } = data;
   return (
     <StyledProfile>
@@ -17,7 +17,7 @@ export default function Profile({ data }) {
       <h2>{name}</h2>
       <p>{login}</p>
 
-      <button type="button">Follow</button>
+      <a href={url}>Follow</a>
 
       <p>{bio}</p>
       <div>
@@ -48,6 +48,7 @@ Profile.propTypes = {
     email: PropTypes.string,
     name: PropTypes.string,
     bio: PropTypes.string,
+    html_url: PropTypes.string,
     followers: PropTypes.number,
     following: PropTypes.number,
   }).isRequired,
